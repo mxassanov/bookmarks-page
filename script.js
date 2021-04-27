@@ -38,7 +38,7 @@ function validate(nameValue, urlValue) {
 function buildBookmarks() {
     // Удаляем все закладки
     bookmarksContainer.textContent = ' '
-    //Создаем DOM
+    // Создаем DOM
     bookmarks.forEach(bookmark => {
         const { name, url } = bookmark
         // Контейнер
@@ -48,10 +48,11 @@ function buildBookmarks() {
         const closeIcon = document.createElement('i')
         closeIcon.classList.add('fas', 'fa-times')
         closeIcon.setAttribute('onclick', `deleteBookmark('${url}')`)
-        //Значок сайта & Контейнер ссылки
+        // Значок сайта & Контейнер ссылки
         const linkInfo = document.createElement('div')
         linkInfo.classList.add('name')
         const favicon = document.createElement('img')
+        // Получаем иконку сайта
         favicon.setAttribute('src', `http://s2.googleusercontent.com/s2/favicons?domain=${url}`)
         favicon.setAttribute('alt', 'Favicon')
         // Ссылка
